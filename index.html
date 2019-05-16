@@ -1,36 +1,14 @@
 <!doctype html>
-<html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title>LibFinder</title>
+    <link rel="icon" sizes="192x192" href="images/logo.svg">
 
-    <!-- Add to homescreen for Chrome on Android -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <link rel="icon" sizes="192x192" href="images/android-desktop.png">
-
-    <!-- Add to homescreen for Safari on iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
-
-    <!-- Tile icon for Win8 (144x144 + tile color) -->
-    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
-    <meta name="msapplication-TileColor" content="#3372DF">
-
-
-    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
-    <!--
-    <link rel="canonical" href="http://www.example.com/">
-    -->
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue-light_blue.min.css" />
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
         #view-source {
@@ -43,42 +21,60 @@
             z-index: 900;
         }
     </style>
+
 </head>
 
-<body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-        <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
-            <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-            </div>
-            <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-                <h3>
-                    COLOCAR LOGO AQUI
-                </h3>
-
-            </div>
+<!--
+<body class="mdl-demo">
+    <div class="mdl-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header ">
 
             <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-
+                <div class="logo">
+                    <img src="images/logo.svg" alt="libFinder">
+                </div>
             </div>
-            <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
 
-            </div>
-            <div id="cover">
-                <form method="get" action="">
-                    <div class="tb">
-                        <div class="td"><input type="text" placeholder="Type the library name" required></div>
-                        <div class="td" id="s-cover">
-                            <button type="submit">
-                        <div id="s-circle"></div>
-                        <span></span>
-                      </button>
-                        </div>
-                    </div>
-                </form>
+            <div class="topnav">
+                <div class="search-container">
+                    <form action="#">
+                        <input type="text" placeholder="Type the library name" name="search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
             </div>
 
         </header>
     </div>
+</body>
+-->
+
+
+
+<body>
+    <header>
+        <div class="cabecalho_superior">
+            <img src="images/logo.svg" alt="libFinder">
+        </div>
+        <div class="cabecalho_inferior">
+            <div class="topnav">
+                <div class="search-container">
+                    <form action="#">
+                        <input type="text" placeholder="Type the library name" name="search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="wrapper">
+        <div class="push"></div>
+    </div>
+
+    <footer class="footer">
+        <div class="txt_footer">Frontend Test • StudioSol • 2019</div>
+    </footer>
 </body>
 
 </html>
