@@ -4,6 +4,11 @@ body {
     margin: 0;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+}
+
 .wrapper {
     min-height: 100%;
     margin-bottom: -50px;
@@ -37,7 +42,6 @@ body {
     overflow: auto;
     background-color: #ffffff;
     border-radius: 10px;
-    font-family: Open Sans;
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
     margin: auto;
 }
@@ -55,6 +59,7 @@ body {
     margin-left: 7.5px;
     max-width: 420px;
     font-size: 20px;
+    font-family: 'Open Sans';
     border: none;
     color: #9b9b9b;
     background-color: white;
@@ -78,13 +83,14 @@ body {
     text-align: center;
     vertical-align: center;
     font-size: 15px;
-}
-
-.footer,
-.push {
-    height: 50px;
+    flex-shrink: 0;
 }
 
 .txt_footer {
     line-height: 50px;
+    font-family: Montserrat;
+}
+
+.content {
+    flex: 1 0 auto;
 }
