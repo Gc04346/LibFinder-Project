@@ -8,8 +8,6 @@
     <link rel="icon" sizes="192x192" href="images/logo.svg">
 
     <link rel="stylesheet" href="styles.css">
-    <!--Link para icone da lupa na searchbox-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--Link para a fonte Montserrat usada no footer-->
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <!--Link para a fonte Open Sans usada na SearchBox-->
@@ -24,22 +22,26 @@
         </div>
         <div class="cabecalho_inferior">
             <!--SearchBox-->
-            <div class="topnav">
+            <div class="searchbox">
                 <div class="search-container">
                     <form action="#">
-                        <input type="text" placeholder="Type the library name" name="search">
-                        <button type="submit"><i class="fa fa-search"></i></button>
+                        <input type="text" id="searchBox" placeholder="Type the library name" name="search">
+                        <button type="submit"><img src="images/submit.svg" alt="submit"></i></button>
                     </form>
                 </div>
             </div>
         </div>
     </header>
 
-    <div class="content"></div>
+    <div class="content">
+
+        <ul class="bibs" id="bibs"></ul>
+    </div>
 
     <footer class="footer">
         <div class="txt_footer">Frontend Test • StudioSol • 2019</div>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
