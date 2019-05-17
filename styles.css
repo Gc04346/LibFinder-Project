@@ -4,14 +4,70 @@ body {
     margin: 0;
 }
 
+
+/*estas configuracoes de body e content garantem o footer colado no final da pagina independente da 
+  quantidade de conteudo no corpo da pagina*/
+
 body {
     display: flex;
     flex-direction: column;
 }
 
-.wrapper {
-    min-height: 100%;
-    margin-bottom: -50px;
+.content {
+    flex: 1 0 auto;
+    margin-top: 12.5px;
+    margin-bottom: 88px;
+    margin: auto;
+}
+
+.bib {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: 'Open Sans';
+    font-size: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+@media screen and (max-width: 1400px) {
+    .bib {
+        width: 480px;
+    }
+    .content {
+        width: 500px;
+        margin-right: 465px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .bib {
+        width: 480px;
+    }
+    .content {
+        width: 500px;
+        margin-right: 301px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .bib {
+        width: 100%;
+    }
+    .content {
+        width: 100%;
+    }
+}
+
+
+/*esta configuracao permite que as bibliotecas retornadas tenham cor de fundo um pouco mais 
+  escura num padrao "uma sim, uma nao"*/
+
+.bib:nth-child(2n+1) {
+    background-color: #eeeeee
 }
 
 .cabecalho_superior {
@@ -33,31 +89,34 @@ body {
     margin-top: 25px;
 }
 
-.cabecalho_inferior .topnav {
+
+/*tamanho da searchbox de acordo com as especificacoes do layout
+  a configuracao max-width garante a responsividade*/
+
+.cabecalho_inferior .searchbox {
     max-width: 500px;
     height: 50px;
 }
 
-.topnav {
-    overflow: auto;
+.searchbox {
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
     margin: auto;
 }
 
-.topnav .search-container {
+.searchbox .search-container {
     position: relative;
     color: white;
 }
 
-.topnav input[type=text] {
+.searchbox input[type=text] {
     float: left;
     padding: 6px;
     margin-top: 5.5px;
     margin-bottom: 6px;
     margin-left: 7.5px;
-    max-width: 420px;
+    max-width: 70%;
     font-size: 20px;
     font-family: 'Open Sans';
     border: none;
@@ -65,9 +124,9 @@ body {
     background-color: white;
 }
 
-.topnav .search-container button {
+.searchbox .search-container button {
     float: right;
-    margin-top: 5px;
+    margin-top: 9px;
     margin-right: 5px;
     margin-bottom: 5px;
     background: transparent;
@@ -89,8 +148,4 @@ body {
 .txt_footer {
     line-height: 50px;
     font-family: Montserrat;
-}
-
-.content {
-    flex: 1 0 auto;
 }
