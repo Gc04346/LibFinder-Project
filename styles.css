@@ -15,8 +15,49 @@ body {
 
 .content {
     flex: 1 0 auto;
-    margin-top: 12.5px;
+    margin-top: 25px;
     margin-bottom: 88px;
+    margin: auto;
+    width: 100%;
+}
+
+#singlepage {
+    display: none;
+    max-width: 500px;
+}
+
+#libName {
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 39px;
+    color: #4A4A4A;
+    margin-top: 23px;
+    margin-bottom: 5px;
+}
+
+#libDescription {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    color: #9B9B9B;
+    margin: auto;
+}
+
+#linha {
+    color: #eeeeee;
+}
+
+#libHomepage,
+#libRepo,
+#libVersionLicense {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-size: 13px;
+    line-height: 20px;
+    color: #4A4A4A;
     margin: auto;
 }
 
@@ -31,34 +72,44 @@ body {
     padding-bottom: 10px;
     padding-left: 10px;
     padding-right: 10px;
+    max-width: 480px;
+    margin: 0 auto;
 }
+
+
+/*media queries para garantir responsividade em situacoes especificas de telas menores*/
 
 @media screen and (max-width: 1400px) {
-    .bib {
-        width: 480px;
-    }
-    .content {
-        width: 500px;
-        margin-right: 465px;
+    .searchbox input[type=text] {
+        width: 85%;
     }
 }
 
-@media screen and (max-width: 1024px) {
-    .bib {
-        width: 480px;
-    }
-    .content {
-        width: 500px;
-        margin-right: 301px;
+@media screen and (max-width: 540px) {
+    #singlepage {
+        margin-left: 20px;
+        margin-right: 20px;
+        width: 100%;
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 500px) {
     .bib {
-        width: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+        max-width: unset;
     }
-    .content {
-        width: 100%;
+    .margin-left {
+        margin-left: 10px;
+    }
+    .margin-right {
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .searchbox input[type=text] {
+        width: 77%;
     }
 }
 
@@ -103,20 +154,15 @@ body {
     border-radius: 10px;
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
     margin: auto;
-}
-
-.searchbox .search-container {
     position: relative;
     color: white;
 }
 
 .searchbox input[type=text] {
-    float: left;
     padding: 6px;
     margin-top: 5.5px;
     margin-bottom: 6px;
     margin-left: 7.5px;
-    max-width: 70%;
     font-size: 20px;
     font-family: 'Open Sans';
     border: none;
@@ -124,7 +170,7 @@ body {
     background-color: white;
 }
 
-.searchbox .search-container button {
+.searchbox button {
     float: right;
     margin-top: 9px;
     margin-right: 5px;
