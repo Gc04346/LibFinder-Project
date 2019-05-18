@@ -2,7 +2,6 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title>LibFinder</title>
     <!--Icone da logo na aba do navegador-->
     <link rel="icon" sizes="192x192" href="images/logo.svg">
@@ -23,19 +22,25 @@
         <div class="cabecalho_inferior">
             <!--SearchBox-->
             <div class="searchbox">
-                <div class="search-container">
-                    <form action="#">
-                        <input type="text" id="searchBox" placeholder="Type the library name" name="search">
-                        <button type="submit"><img src="images/submit.svg" alt="submit"></i></button>
-                    </form>
-                </div>
+                <input type="text" id="searchBox" placeholder="Type the library name" name="search">
+                <button type="submit"><img src="images/submit.svg" alt="submit"></i></button>
             </div>
         </div>
     </header>
 
-    <div class="content">
+    <!--Ha duas divs no conteudo da pagina: uma para exibicao da lista de resultados, e outra para exibicao
+        de detalhes sobre a lib escolhida. no script.js ocorre a selecao de qual das duas divs sera exibida em cada momento.-->
+    <div class="content" id="list">
+        <ul class="bibs" style="padding: 0" id="bibs"></ul>
+    </div>
 
-        <ul class="bibs" id="bibs"></ul>
+    <div class="content" id="singlepage">
+        <h2 id="libName"></h2>
+        <h3 id="libDescription"></h3>
+        <hr id="linha"></hr>
+        <p id="libHomepage"></p>
+        <p id="libRepo"></p>
+        <p id="libVersionLicense"></p>
     </div>
 
     <footer class="footer">
